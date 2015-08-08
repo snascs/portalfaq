@@ -1,7 +1,11 @@
 <h1>Faq</h1>
 <ul>
     {% for faq in object_list %}
-        <li>{{ faq.pergunta }} {{ faq.resposta }} {{ faq.data }}</li>
+        <li>Pergunta: {{ faq.pergunta }}</li>
+        <li>Resposta: {{ faq.resposta }}</li>
+        <li>Data: {{ faq.data }}</li>
+            <a href="{% url 'faq:alterar_faq' faq.pk %}">Editar</a>
+            <a href="{% url 'faq:deletar_faq' faq.pk %}">Deletar</a>
     {% empty %}
         <li>Não existem perguntas frequentes</li>
 {% endfor %}
