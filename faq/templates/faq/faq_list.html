@@ -1,0 +1,8 @@
+<h1>Faq</h1>
+<ul>
+    {% for faq in object_list %}
+        <li>{{ faq.pergunta }} {{ faq.resposta }} {{ faq.data }}</li>
+    {% empty %}
+        <li>Não existem perguntas frequentes</li>
+{% endfor %}
+</ul>
