@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 
-from cadastro import views
+from faq import views
 
 from django.contrib import admin
 admin.autodiscover()
